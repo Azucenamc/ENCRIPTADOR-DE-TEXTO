@@ -138,9 +138,12 @@ main {
 .result_text {
     font-size: 2rem;
     color: var(--blue);
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; 
+    width: 250px;
+    height: 250px;
+    overflow: auto; /* Agrega una barra de desplazamiento si es necesario */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
 }
-
 .copy_button_container {
     display: flex;
     justify-content: flex-end; 
@@ -231,9 +234,11 @@ footer {
 
     .result_text {
         font-size: 1.4rem;
-        margin-bottom: 1rem; 
-    }
+        margin-bottom: 1rem;
 
+    }
+    
+    
     .pielogo {
         width: 80%; 
         max-width: 150px; 
@@ -244,7 +249,17 @@ footer {
     }
 }
 
+@media (max-width: 600px) {
+    .result_text {
+        font-size: 1.5rem;
+    }
+}
 
+@media (min-width: 601px) and (max-width: 1024px) {
+    .result_text {
+        font-size: 1.75rem;
+    }
+}
 
 
 /* HTML: <div class="loader"></div> */
@@ -303,4 +318,5 @@ footer {
     0%,30%   { transform:translateY(0); }
     80%,100% { transform:translateY(-260%); }
   }
+  
   
